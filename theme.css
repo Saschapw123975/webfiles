@@ -1,0 +1,215 @@
+/* Theme CSS Variables - Default Blue Theme */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #151515;
+    --text-primary: #f5f5f5;
+    --text-secondary: #e0e0e0;
+    --text-muted: #888888;
+    --border-color: #3d73ff;
+    --accent-color: #3d73ff;
+    --accent-secondary: #6dd8ff;
+    --accent-hover: #5a8fff;
+    --button-bg: #3d73ff;
+    --button-hover: #5a8fff;
+    --card-bg: #1a1a1a;
+    --input-bg: #2a2a2a;
+    --success-color: #48bb78;
+    --error-color: #f44747;
+    --warning-color: #ce9178;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --gradient-start: #3d73ff;
+    --gradient-end: #6dd8ff;
+    
+    /* Smooth transitions for all theme changes */
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Gold/Yellow Theme */
+body.gold-theme,
+html.gold-theme {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #151515;
+    --text-primary: #f5f5f5;
+    --text-secondary: #e0e0e0;
+    --text-muted: #888888;
+    --border-color: #d4af37;
+    --accent-color: #ffd700;
+    --accent-secondary: #d4af37;
+    --accent-hover: #ffed4e;
+    --button-bg: #d4af37;
+    --button-hover: #ffd700;
+    --card-bg: #1a1a1a;
+    --input-bg: #2a2a2a;
+    --success-color: #ffd700;
+    --error-color: #ff6b6b;
+    --warning-color: #ffb84d;
+    --shadow: rgba(255, 215, 0, 0.2);
+    --gradient-start: #d4af37;
+    --gradient-end: #ffd700;
+}
+
+/* Dark Theme (Legacy support) */
+.dark-theme {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #151515;
+    --text-primary: #f5f5f5;
+    --text-secondary: #e0e0e0;
+    --text-muted: #888888;
+    --border-color: #3d73ff;
+    --accent-color: #3d73ff;
+    --accent-secondary: #6dd8ff;
+    --accent-hover: #5a8fff;
+    --button-bg: #3d73ff;
+    --button-hover: #5a8fff;
+    --card-bg: #1a1a1a;
+    --input-bg: #2a2a2a;
+    --success-color: #48bb78;
+    --error-color: #f44747;
+    --warning-color: #ce9178;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --gradient-start: #3d73ff;
+    --gradient-end: #6dd8ff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Dark theme specific adjustments */
+.dark-theme .theme-toggle {
+    background: linear-gradient(135deg, #2d2d30, #3e3e42);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--border-color);
+}
+
+.dark-theme .theme-toggle:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.4);
+}
+
+/* Light theme specific adjustments */
+.theme-toggle:not(.dark-theme) {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:not(.dark-theme):hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: white;
+    transform: scale(1.1) rotate(-15deg);
+}
+
+/* Apply theme variables to common elements */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.btn-primary {
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.border {
+    border-color: var(--border-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Scrollbar styling for dark theme */
+.dark-theme ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 6px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Light theme scrollbar */
+.light-theme ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.light-theme ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.light-theme ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 6px;
+}
+
+.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
